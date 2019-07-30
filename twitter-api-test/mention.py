@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import tweepy, re
-import pandas as pd
 from auth import api
 
 def get_mentions_names(tweet, mentions, count):
@@ -49,5 +48,5 @@ def get_mentions_filter(user_mentions, keywords_list, count_mentions_keyword):
                 if find != 0:
                     break    # Break the loop to pass on the next user (to avoid miscalculation if the tag is present several time in the desc)
     for i in range(len(count_mentions_keyword)):
-        print("\n" + str(keywords_list[i]) + " mentions = " + str(len(count_mentions_keyword[i]) - 1))
+        print(str(keywords_list[i]) + " mentions = " + str(len(count_mentions_keyword[i]) - 1))
     return count_mentions_keyword

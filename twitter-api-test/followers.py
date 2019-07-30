@@ -34,5 +34,5 @@ def follower_filter(username, keywords_list, count_followers_keyword):
                 if find != 0:
                     break    # Break the loop to pass on the next user (to avoid miscalculation if the tag is present several time in the desc)
     for i in range(len(count_followers_keyword)):
-        print("\n" + str(keywords_list[i]) + " followers = " + str(len(count_followers_keyword[i]) - 1))
+        print(str(keywords_list[i]) + " followers = " + str(len(count_followers_keyword[i]) - 1))
     return count_followers_keyword
